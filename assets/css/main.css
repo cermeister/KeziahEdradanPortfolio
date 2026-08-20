@@ -937,6 +937,9 @@ section,
 .about .personal-info .info-item .value {
   font-weight: 600;
   color: var(--heading-color);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .about .signature {
@@ -1655,6 +1658,14 @@ section,
 .contact .contact-form .btn-submit:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
   transform: translateY(-1px);
+}
+
+/* Mobile responsive for personal details */
+@media (max-width: 576px) {
+  .about .personal-info .row .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .contact .contact-form .btn-submit:active {
